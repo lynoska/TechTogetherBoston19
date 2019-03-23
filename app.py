@@ -24,8 +24,6 @@ db = firebase.database()
 # Route to index page
 @app.route('/')
 def index():
-	posts = db.child("post").get()
-	print(posts.val())
 	return render_template('index.html')
 
 # Route to Resources page page
@@ -37,7 +35,7 @@ def resources():
 @app.route('/forum', methods=['GET'])
 def forum():
 	posts = db.child("post").get().val()
-
+	print(posts)
 	return render_template('forum.html', posts=posts)
 
 # Route to main Forum page
