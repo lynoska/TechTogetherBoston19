@@ -22,6 +22,11 @@ def resources():
 def forum():
 	return render_template('forum.html')
 
+# Route to main Forum page
+@app.route('/create-post')
+def post():
+	return render_template('create-post.html')
+
 
 if __name__ == '__main__':
 	app.run('localhost', 8080, debug=True)
