@@ -10,6 +10,13 @@ input[type=textarea] {
 	height: 150px;
 }
 
+
+input[type=text], select#inputUserType.form-control, select#inputType.form-control {
+	height: 50px;
+}
+
+
+
 #submit {
 	background-color: #004990;
 	font-size: 20px;
