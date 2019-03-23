@@ -52,10 +52,22 @@
 	</nav>
 
 	<main role="main" class="container request-page mt-5">
-		<div class="jumbotron pt-4 pb-5">
+		<div class="jumbotron pt-4 pb-5 text-center">
 			<h1> Forms </h1>
+
+
+			{% for post in posts.values() %}
+				<div class="container forum-posts">
+					<div class="post-details">
+						<ul> Post #: {{post["post_id"]}} </ul>
+						<ul> Title:  {{post['title']}} </ul>
+						<ul> Category: {{post['category']}} </ul>
+						<ul> Purpose: {{post['purpose']}} </ul>
+						<ul> Description: {{post['text']}} </ul>
+					</div>
+				</div>
+			{% endfor %}
+
 		</div>
 	</main>
-	
-
 {% endblock %}
