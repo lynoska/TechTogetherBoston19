@@ -1,0 +1,26 @@
+@font-face { font-family: din; font-weight: regular; src: url('../din1451alt.ttf'); }
+
+body {
+	font-family: din;
+	font-size: 25px;
+}
+
+input[type=textarea] {
+	width: 100%;
+	height: 150px;
+}
+
+#submit {
+	background-color: #004990;
+	font-size: 20px;
+	border: none;
+	height: 60px;
+	width: 50%;
+	color: #fff;
+	border-radius: 13px;
+	font-weight: bold;	
+}
+
+.form-row {
+	width: 100%;
+}

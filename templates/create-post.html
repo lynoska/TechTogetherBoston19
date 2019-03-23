@@ -1,0 +1,76 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+{% block head %}
+	<title>Submit a Post</title>
+
+	{% block styles %}
+	{{ super() }}
+	<link href="{{url_for('static',filename='css/stylesheet.css')}}" rel="stylesheet">
+	{% endblock styles %}
+{% endblock head %}
+
+{% block body_attribs %} class="post-body text-center"{% endblock %}{% block body %}
+{{ super() }}
+	<main role="main" class="container create-post">
+		<div class="alert alert-warning mt-5" role="alert">
+			Remember: We do not track your data therefore you must remember the title you gave the post to find it again!
+		</div>
+
+		<div class="jumbotron">
+			<h1>Submit a Post</h1>
+
+			<form method="POST"> 
+				<div class="form-group mt-5">
+					<label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+					<div class="cold-lg-10">
+						<input type="text" class="form-control" id="post-title" placeholder="Give it a title you will remember" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputCategory" class="col-sm-2 col-form-label align-center">Topic Category</label>
+						<select id="inputType" class="form-control" required>
+					        <option selected>Choose . . .</option>
+					        <option> Domestic Abuse </option>
+					        <option> Dating Abuse </option>
+					        <option> Child Abuse </option>
+					        <option> Suicide Prevention </option>
+					        <option> Sexual Assault </option>
+					        <option> Deaf Abused Women & Non-Binary </option>
+					        <option> Women and Non-Binary of Color </option>
+					        <option> Latinx Alianza </option>
+					        <option> National Indegenous Women & Non-Binary </option>
+					        <option> Trans Lifeline </option>
+					        <option> LGBTQ+ </option>
+					    </select>
+					</div>
+
+					<div class="form-group col-md-6">
+						<label for="inputUserType" class="col-sm-2 col-form-label align-center">Post Type</label>
+						<select id="inputUserType" class="form-control" required="">
+					        <option selected>Choose . . .</option>
+					        <option> Loooking for Support </option>
+					        <option> Curious/Educational </option>
+					        <option> How to help </option>
+					    </select>
+					</div>
+				</div>
+
+
+				<div class="form-group ">
+					<label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+					<div class="cold-sm-10 pb-3">
+						<input type="textarea" class= "form-control post-description" id="post-title" placeholder="Tell us about it . . . " required>
+					</div>
+				</div>
+
+				<div class="post-submit mt-4">
+					<button name="submit" id="submit" type="submit"><b>Post this!</b></button>
+				</div>
+			</form>
+		</div>		
+	</main>
+
+{% endblock %}
