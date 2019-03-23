@@ -11,7 +11,7 @@ input[type=textarea] {
 }
 
 
-input[type=text], select#inputUserType.form-control, select#inputType.form-control {
+input[type=text], select#inputPurpose.form-control, select#inputType.form-control {
 	height: 50px;
 }
 
