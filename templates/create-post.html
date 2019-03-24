@@ -20,41 +20,40 @@
 		<div class="jumbotron">
 			<h1>Submit a Post</h1>
 
-			<form method="POST"> 
+			<form action="{{url_for('submit_forum')}}" method="POST"> 
 				<div class="form-group mt-5">
 					<label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
 					<div class="cold-lg-10">
-						<input type="text" class="form-control" id="post-title" placeholder="Give it a title you will remember" required>
+						<input type="text" class="form-control" id="post-title" placeholder="Give it a title you will remember" name="title" required>
 					</div>
 				</div>
 
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="inputCategory" class="col-sm-2 col-form-label align-center">Topic Category</label>
-						<select id="inputType" class="form-control" required>
+						<select id="inputType" class="form-control" name="category" required>
 					        <option selected>Choose . . .</option>
-					        <option> Domestic Abuse </option>
-					        <option> Dating Abuse </option>
-					        <option> Child Abuse </option>
-					        <option> Suicide Prevention </option>
-					        <option> Sexual Assault </option>
-					        <option> Deaf Abused Women & Non-Binary </option>
-					        <option> Women and Non-Binary of Color </option>
-					        <option> Latinx </option>
-					        <option> National Indigenous Women & Non-Binary </option>
-					        <option> Trans Lifeline </option>
-					        <option> LGBTQ+ </option>
+					        <option value="Domestic Abuse"> Domestic Abuse </option>
+					        <option value="Dating Abuse"> Dating Abuse </option>
+					        <option value="Child Abuse"> Child Abuse </option>
+					        <option value="Suicide Prevention"> Suicide Prevention </option>
+					        <option value="Sexual Assault"> Sexual Assault </option>
+					        <option value="Deaf Abused Women & Non-Binary"> Deaf Abused Women & Non-Binary </option>
+					        <option value="Women and Non-Binary People of Color"> Women and Non-Binary People of Color </option>
+					        <option value="Latinx Support"> Latinx Support </option>
+					        <option value="Indigenous Women & Non-Binary Support"> Indigenous Women & Non-Binary Support </option>
+					        <option value="Trans Lifeline"> Trans Lifeline </option>
+					        <option value="LGBTQ+"> LGBTQ+ </option>
 					    </select>
 					</div>
 
 					<div class="form-group col-md-6">
-						<label for="inputUserType" class="col-sm-2 col-form-label align-center">Post Type</label>
-						<select id="inputPurpose" class="form-control" required="">
+						<label for="inputUserType" class="col-sm-2 col-form-label align-center" name="purpose">Post Type</label>
+						<select id="inputPurpose" class="form-control" name="purpose" required="">
 					        <option selected>Choose . . .</option>
-					        <option> Loooking for Support </option>
-					        <option> Curious/Educational </option>
-					        <option> How to help </option>
-					        <option> Help someone </option>
+					        <option value="Support"> Loooking for Support </option>
+					        <option value="Education"> Curious/Educational </option>
+					        <option value="Help Out"> How to help </option>
 					    </select>
 					</div>
 				</div>
@@ -63,7 +62,7 @@
 				<div class="form-group ">
 					<label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
 					<div class="cold-sm-10 pb-3">
-						<input type="textarea" class= "form-control post-description" id="post-title" placeholder="Tell us about it . . . " required>
+						<input type="textarea" class= "form-control post-description" id="post-title" placeholder="Tell us about it . . . " name="text" required>
 					</div>
 				</div>
 
