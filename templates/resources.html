@@ -25,24 +25,27 @@
 				<a class="nav-link" href="{{url_for('forum')}}">Forum</a>
 				<a class="nav-link" href="{{url_for('post')}}">Create a Post</a>
 				<a class="nav-link" href="#">Report</a>
+				<a class="nav-link" href="#">Resources</a>
 				<a class="nav-link" href="{{url_for('about')}}"">About</a>
-
-				<ul class="nav-item dropdown pl-1">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Resources 
-					</a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Hotlines </a>
-						<a class="dropdown-item" href="#">Crisis Centers </a>
-						<a class="dropdown-item" href="#">Professional Help </a>
-						<a class="dropdown-item" href="#">Support Group </a>
-						<a class="dropdown-item" href="#">Statistics </a>
-					</div>
-				</ul>
     		</ul>
     	</div>
 	</nav>
 
 
+	<div class="mt-5 row">
+	    <div class="jumbotron col-sm-4 text-center" >
+	      <p>All reports can be anonymous so you can share your story without fear of retaliation. We have made a commitment to ethical behavior and are asking you to do the same. If you witness questionable activity in the workplace, report it.</p>
 
+			<ul><li>All reports to the hotline can be anonymous.</li>
+			<li>The operators answering the calls are available 24 hours a day, seven days a week and are trained in making callers feel at ease and gathering information that will enable the workers to fully investigate the issues raised.</li>
+			<li>The hotline system allows an individual to follow up, either by telephone or the Internet, to obtain status updates. They can be accessed by using passwords related to the specific complaint.</li></ul>
+	    </div>
+	    <div class="jumbotron col-sm-4 text-center">
+	        <h2><span>Community Resources</span></h2><p>Attorney General Hotline: 814-863-1053<br /><br /><a href="http://ccwrc.org/">Centre County Women's Resource Center</a>, or telephone: 877-234-5050<br /><br /><a href="http://www.dpw.state.pa.us/provider/childwelfareservices/childlineandabuseregistry/index.htm">Childline </a>Telephone: 800-932-0313<br /><br /><a href="http://www.thehotline.org/">National Domestic Violence Hotline</a> or telephone: 800-799-7233<br /><br /><a href="http://www.rainn.org/get-help/national-sexual-assault-hotline/">National Sexual Assault Hotline (RAINN)</a> or telephone: 800-656-4673<br /><br /><a href="http://lookoutforchildabuse.org/">Look Out for Child Abuse</a></p>
+			<h4> </h4>
+			<span property="dc:title" content="Hotlines" class="rdf-meta element-hidden"></span> 
+	    </div>
+	</div> 
 {% endblock %}
+
+
