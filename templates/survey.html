@@ -1,0 +1,95 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+{% block head %}
+	<title>Welcome</title>
+
+	{% block styles %}
+	{{ super() }}
+	<link href="{{url_for('static',filename='css/stylesheet.css')}}" rel="stylesheet">
+	{% endblock styles %} 
+{% endblock head %}
+
+{% block body_attribs %} class="post-body text-center"{% endblock %}{% block body %}
+	{{ super() }}
+		<img class="survey-logo mt-5 mb-2" src="{{url_for('static',filename='img/library-survey-logo.png')}}" alt="Library Services Logo">
+	<main role="main" class="container survey-page mt-5">
+		<div class="jumbotron survey mr-3 ml-3 mt-3 mb-3">
+			<form>
+				<div class="row mb-5">
+				    <div class="col col-md-6 d-inline">
+				        <label for="inputTitle" class="col-sm-2 col-form-label">Checkout #</label>
+				        <input type="text" class="form-control" placeholder="First name">
+				    </div>
+				    <div class="col col-md-6 d-inline">
+				    	<label for="inputTitle" class="col-sm-2 col-form-label d-inline-block">Date Visited</label>
+				      <input type="text" class="form-control" placeholder="Last name">
+				    </div>
+				</div>
+
+				<div class="question text-center">
+					<span for="inputTitle" class="col-sm-2 col-form-label">Did you checked out books on this visit?<br></span>
+					<div class="form-check align-center">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1"> Yes </label>
+					</div>
+
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1"> No </label>
+					</div>
+				</div>
+				<!-- seperate -->
+				<div class="question text-center">
+					<span for="inputTitle" class="col-sm-2 col-form-label">Did you receive any assistance from anyone while visiting?<br></span>
+					<div class="form-check align-center">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1"> Yes </label>
+					</div>
+
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<label class="form-check-label" for="defaultCheck1"> No </label>
+					</div>
+				</div>
+				<!-- seperate -->
+				<div class="question text-center">
+					<span for="inputTitle" class="col-sm-2 col-form-label">On a scale from 1-10, how likely are you to come back? Why? <br></span>
+
+					<input class="form-control rating mb-4" type="number" min="1" max="10" step="0.5"></input>
+					<input type="text" class="form-control"  name="title">
+				</div>
+
+				<button class="mt-5 align-items-center"id="submit"> Submit Feedback </button>
+
+				<div class="alert alert-warning alert-dismissable"> 
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Either the Checkout # or the Date does not match what we have on file. Try again.
+        		</div>
+
+        		<script type="text/javascript">
+				{% block head_js %}
+
+					$(document).ready(function(){
+				    $('button').click(function(){
+				        $('.alert').show()
+					    }) 
+					});
+
+				{% endblock %}
+				</script>
+
+			</form>
+		
+		</div>
+
+		<iframe
+		    width="350"
+		    height="430"
+		    src="https://console.dialogflow.com/api-client/demo/embedded/3e1b4b8f-4a23-4f7b-9d64-f596e4d8d5d0"
+		</iframe>
+		
+
+	</main>
+
+
+{% endblock %}
