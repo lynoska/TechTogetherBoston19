@@ -10,7 +10,7 @@
 	{% endblock styles %} 
 {% endblock head %}
 
-{% block body_attribs %} class="post-body text-center"{% endblock %}{% block body %}
+{% block body_attribs %} class="survey-container post-body text-center"{% endblock %}{% block body %}
 	{{ super() }}
 		<img class="survey-logo mt-5 mb-2" src="{{url_for('static',filename='img/library-survey-logo.png')}}" alt="Library Services Logo">
 	<main role="main" class="container survey-page mt-5">

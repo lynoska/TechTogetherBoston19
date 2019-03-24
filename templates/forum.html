@@ -15,18 +15,17 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
     	<img src="{{url_for('static',filename='img/codered-logo.png')}}" width="80" height="80" class="d-inline-block align-top" alt="">
-    	<a class="navbar-brand">Welcome to Code</a><a class="navbar-brand company-name">:Red</a>
+    	<a class="navbar-brand mr-3">Welcome to CodeRed</a>
     	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 		    <span class="navbar-toggler-icon"></span>
 		</button>
 
     	<div class="collapse navbar-collapse" id="navbarSupportedContent">
     		<ul class="navbar-nav ml-auto">
-				<a class="nav-link" href="#">Home</a>
 				<a class="nav-link" href="{{url_for('forum')}}">Forum</a>
 				<a class="nav-link" href="{{url_for('post')}}">Create a Post</a>
 				<a class="nav-link" href="#">Report</a>
-				<a class="nav-link" href="#">About</a>
+				<a class="nav-link" href="{{url_for('about')}}"">About</a>
 
 				<ul class="nav-item dropdown pl-1">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,7 +45,7 @@
 
 	<main role="main" class="container request-page mt-5">
 		<div class="jumbotron pt-4 pb-5 text-center">
-			<h1> Forms </h1>
+			<h1> Formus </h1>
 
 			{% for post in posts.values() %}
 				<div class="container forum-posts">
@@ -55,11 +54,18 @@
 						<ul> Title:  {{post['title']}} </ul>
 						<ul> Category: {{post['category']}} </ul>
 						<ul> Purpose: {{post['purpose']}} </ul>
+						<ul> Description: {{post['text']}} </ul>
 					</div>
 				</div>
 				<div class="border-top my-3 mx-3 mb-3"></div>
 			{% endfor %}
 
 		</div>
+
+		<iframe
+		    width="350"
+		    height="430"
+		    src="https://console.dialogflow.com/api-client/demo/embedded/3e1b4b8f-4a23-4f7b-9d64-f596e4d8d5d0"
+		</iframe>
 	</main>
 {% endblock %}
